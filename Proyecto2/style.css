@@ -1,0 +1,21 @@
+body {
+    background-color: #2b2b2b; /* Fondo oscuro */
+    color: rgb(209, 21, 21); /* Texto blanco */
+    font-family: Arial, sans-serif; /* Tipo de letra más limpio */
+    text-align: center; /* Centra todo el contenido */
+    margin-top: 100px; /* Da un espacio en la parte superior */
+}
+
+h1 {
+    color: #4CAF50; /* Cambia el título a color verde */
+    font-size: 50px; /* Hace la letra más grande */
+}
+
+.container { 
+    color: #afaa4c;
+    transition: width 1s linear;
+}
+
+.container:hover {
+    width: 600px; /* Aquí le decimos que crezca a los 600px que querías */
+}
