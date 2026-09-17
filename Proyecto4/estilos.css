@@ -1,0 +1,12 @@
+
+
+div.todos{
+    width: 100%;
+    overflow: auto;
+}
+
+div.todos div{
+    float: left;
+    width: 30%;
+
+}
