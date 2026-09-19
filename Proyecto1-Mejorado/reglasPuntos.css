@@ -5,6 +5,11 @@ body{
     background-attachment: fixed;
 }
 
+.universal{
+    max-width: 512px;
+    width: 100%;
+}
+
 h1 {
     font-size: 46px;
     color: rgb(236, 81, 14);  text-align: center;
