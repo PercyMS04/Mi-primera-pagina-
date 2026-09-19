@@ -4,20 +4,6 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
-.modificar{
-    display: flex;
-    justify-content: center;
-
-}
-.modificar2{
-    display: flex;
-    justify-content: center;
-
-}
-.imagenPrincipal{
-    max-width: 230px;
-    width: 100%; 
-}
 
 h1 {
     font-size: 46px;
@@ -27,3 +13,11 @@ h1 {
 h2{
     color: rgb(148, 12, 239)
     }
+
+.colorPuntos{
+    color: rgb(99, 36, 5);
+}
+
+.colorPuntos2{
+    color: rgb(156, 5, 149);
+}
