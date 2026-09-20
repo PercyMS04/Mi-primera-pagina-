@@ -1,9 +1,131 @@
+/* 1. VARIABLES
+   Cambia un color aquí y cambia en todo el sitio. */
+:root {
+  --tinta: #1c1233;          /* casi negro con tono violeta: textos y marcos */
+  --papel: #f4eefc;          /* fondo de la página */
+  --tarjeta: #ffffff;        /* fondo de las fichas */
+  --naranja: #ec510e;        /* tu naranja de los títulos */
+  --violeta: #940cef;        /* tu violeta de los subtítulos */
+  --lila: #d9c8ff;           /* texto secundario sobre fondo oscuro */
+
+  --fuente-titulos: 'Dela Gothic One', 'Arial Black', Impact, sans-serif;
+  --fuente-texto: 'Zen Kaku Gothic New', 'Segoe UI', Arial, sans-serif;
+
+  --marco: 3px solid var(--tinta);
+  --sombra: 8px 8px 0 var(--tinta);
+}
+
+
+
+
 body{
+    margin: 0;
+    font-family: var(--fuente-texto);
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),url(https://img.magnific.com/foto-gratis/ilustracion-ojos-anime_23-2151660526.jpg?semt=ais_hybrid&w=740&q=80) ;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
+
+
+/* Reglas de Index, ENCABEZADOOOO*/
+.encabezado{
+    background-color: var(--tinta);
+    border-bottom: 4px solid var(--naranja)
+}
+
+.primerEncabezado{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+        margin: 0 auto;
+        padding: 0.85rem 1.25rem;
+        max-width: 1080px
+}
+
+.tituloEncabezado{
+    color: var(--naranja);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: var(--fuente-titulos);
+}
+
+.menu{
+    display: flex;
+    gap: 0.25rem 1.25rem;
+    flex-wrap: wrap;
+    border-bottom: 3px solid transparent;
+}
+
+.menu a{
+    padding: 0.3rem 0;
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover, 
+.menu a [aria-current="pagina"]{
+    border-bottom-color: var(--naranja);
+}
+
+.menu a [aria-current="pagina"]{
+    font-weight: 700;
+}
+
+.encabezado a:focus-visible{
+    outline-color: white;
+
+}
+
+
+.contenido {
+  max-width: 1080px;         /* ancho máximo: no se estira en pantallas grandes */
+  margin: 0 auto;            /* centra la caja */
+  padding: 2rem 1.25rem 3rem;
+}
+
+
+/* Reglas de Index, IMAGEN PRINCIPAL-PORTADA*/
+
+.portada{
+    display: grid;
+    gap: 2rem;
+    padding: 2.5rem 1.25rem 1rem;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.portada h1{
+    font-size: clamp(3rem 11vw 6rem);
+}
+.portada p{
+    max-width: 30ch;
+    margin: 0;
+    font-size: 1.3rem;
+}
+.portadaImagen{
+    border: var(--marco);
+    background-color: white;
+    box-shadow: 10px 10px 0 var; 
+}
+
+.portadaImagen img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+
+}
+
+
+
+
+
+
+
+
 .modificar{
     display: flex;
     justify-content: center;

@@ -1,0 +1,217 @@
+/* =========================================================
+   ESTILOS.CSS - Freelancer Diego Díaz
+   Un solo archivo para todas las páginas del sitio.
+   Si ya tienes un estilos.css, pega solo las secciones 3 a 8
+   al final de tu archivo.
+   ========================================================= */
+
+
+/* 1. VARIABLES: cambia un color aquí y cambia en todo el sitio */
+:root {
+  --fondo: #ffe4c4;          /* el durazno de tu página actual */
+  --texto: #2c3e50;          /* gris azulado oscuro de los títulos */
+  --enlace: #0000cc;         /* azul de los enlaces */
+  --tarjeta: #fffaf3;        /* fondo claro de las tarjetas */
+  --borde: #d9b98f;          /* marrón suave para bordes */
+  --acento: #1a5f7a;         /* azul verdoso para botones y detalles */
+}
+
+
+/* 2. BASE: reglas que afectan a toda la página */
+* {
+  box-sizing: border-box;    /* el padding no agranda las cajas */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background-color: var(--fondo);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+a {
+  color: var(--enlace);
+}
+
+/* Contorno visible al navegar con el teclado (tecla Tab) */
+a:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 2px;
+}
+
+
+
+nav {
+  flex-wrap: wrap;           /* si no caben, pasan a otra línea */
+  gap: 0.5rem 1.25rem;       /* separación vertical y horizontal */
+  padding: 1.5rem;
+  background-color: #2c3e50;
+  text-align: center;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    margin: 0 0.5rem;
+    transition: background 0.3s ease;
+
+}
+
+/* La página donde estás se marca sola con aria-current="page" */
+nav a:hover {
+  border-bottom: 3px solid var(--acento);
+  background-color: #3498db;
+}
+
+
+
+
+
+
+
+
+/* 4. CONTENIDO PRINCIPAL */
+.contenido {
+  max-width: 1000px;         /* ancho máximo: no se estira en pantallas grandes */
+  margin: 0 auto;            /* centra la caja */
+  padding: 1rem 1.5rem 2rem;
+}
+
+.contenido section {
+  margin-bottom: 2.5rem;
+}
+
+.intro {
+  max-width: 65ch;           /* líneas de unos 65 caracteres: más fáciles de leer */
+}
+
+
+/* 5. TARJETAS DE PROYECTOS (página Clientes) */
+.proyectos {
+  display: grid;
+  /* Columnas automáticas: mínimo 260px cada una, se reparten el espacio.
+     En celular queda 1 columna, en pantalla grande hasta 3. */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.proyecto {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  overflow: hidden;          /* la imagen respeta las esquinas redondeadas */
+}
+
+/* Imagen de relleno. Al poner tu <img> con esta clase, se ve igual. */
+.proyecto-imagen {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;         /* recorta la foto sin deformarla */
+  background-color: var(--borde);
+}
+
+/* Colores distintos por tarjeta mientras no haya imágenes reales */
+.proyecto:nth-child(1) .proyecto-imagen { background-color: #7fb7c9; }
+.proyecto:nth-child(2) .proyecto-imagen { background-color: #c9a27f; }
+.proyecto:nth-child(3) .proyecto-imagen { background-color: #9fc99a; }
+
+.proyecto-cuerpo {
+  padding: 1rem;
+}
+
+.proyecto-cuerpo h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.servicio {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--acento);
+}
+
+.proyecto-cuerpo p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* 6. TESTIMONIOS */
+.testimonio {
+  margin: 0 0 1.25rem;
+  padding: 0.75rem 1.25rem;
+  max-width: 65ch;
+  background-color: var(--tarjeta);
+  border-left: 5px solid var(--acento);
+}
+
+.testimonio p {
+  margin: 0 0 0.5rem;
+  font-style: italic;
+}
+
+.testimonio footer {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+
+/* 7. LLAMADA A LA ACCIÓN Y BOTÓN */
+.llamada {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  color: #ffffff;
+  background-color: var(--acento);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.boton:hover {
+  background-color: #12475b;
+}
+
+.boton:focus-visible {
+  outline: 3px solid var(--texto);
+  outline-offset: 3px;
+}
+
+
+/* 8. PIE DE PÁGINA Y PANTALLAS PEQUEÑAS */
+.pie {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 2px solid var(--borde);
+}
+
+/* Solo se aplica cuando la pantalla mide 600px o menos (celulares) */
+@media (max-width: 600px) {
+  .encabezado h1 {
+    font-size: 1.6rem;
+  }
+
+  .contenido {
+    padding: 1rem;
+  }
+}
